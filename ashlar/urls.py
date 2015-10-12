@@ -16,6 +16,7 @@ router.register('recordtypes', views.RecordTypeViewSet)
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^api/', include(router.urls)),
+    url(r'openid/', include('djangooidc.urls')),
 ]
 
 # Allow login to the browseable API if in debug mode
